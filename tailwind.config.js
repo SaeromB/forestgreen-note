@@ -1,4 +1,6 @@
 const colors = require('tailwindcss/colors');
+delete colors['lightBlue'];
+
 module.exports = {
   purge: ['./pages/**/*.tsx', './src/components/**/*.tsx'],
   darkMode: false, // or 'media' or 'class'
@@ -7,10 +9,11 @@ module.exports = {
       dropShadow: {},
     },
     colors: {
+      ...colors,
       transparent: 'transparent',
       current: 'currentColor',
-      gray: colors,
-      white: '#ffffff',
+      // gray: colors.gray,
+      // white: '#ffffff',
     },
   },
   variants: {},
