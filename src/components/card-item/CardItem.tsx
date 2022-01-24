@@ -22,7 +22,7 @@ const CardItem: FC<CardItemProps> = ({ title, content, onClick }) => {
         onClick={onClick}
         className="aspect-w-1 aspect-h-1 text-left cursor-pointer"
       >
-        <div className="border border-gray-300 border-opacity-100 bg-white rounded-lg shadow-sm p-4">
+        <div className="border border-gray-300 hover:border-gray-400 border-opacity-100 bg-white rounded-lg shadow-sm p-4">
           <div className="h-full text-left">
             <div>
               <p className="text-gray-900 leading-2 text-lg font-medium line-clamp-2 max-h-14 m-0">
