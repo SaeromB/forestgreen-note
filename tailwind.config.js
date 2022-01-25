@@ -1,10 +1,22 @@
+const colors = require('tailwindcss/colors');
+delete colors['lightBlue'];
+
 module.exports = {
-  content: [
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
-  ],
+  purge: ['./pages/**/*.tsx', './src/components/**/*.tsx'],
+  darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      dropShadow: {},
+    },
+    colors: {
+      ...colors,
+      transparent: 'transparent',
+      current: 'currentColor',
+    },
   },
-  plugins: [],
+  variants: {},
+  plugins: [
+    require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/line-clamp'),
+  ],
 };

@@ -1,10 +1,8 @@
 import type { NextPage } from 'next';
-import Head from 'next/head';
-import Image from 'next/image';
-import styles from '../styles/Home.module.css';
+import CardItem from '../src/components/card-item/CardItem';
 
 const Home: NextPage = () => {
-  return <div className="text-3xl font-bold underline"> Hello world!</div>;
+  return <div></div>;
 };
 
 export default Home;
